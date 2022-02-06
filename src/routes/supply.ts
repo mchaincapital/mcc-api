@@ -57,17 +57,9 @@ export default async function OKLGSupply(app: Application) {
       ] = await Promise.all([
         bscContract.methods.totalSupply().call(),
         ethContract.methods.totalSupply().call(),
-        bscContract.methods.decimals().call(),
-        bscContract.methods.balanceOf(burnWallet).call(),
-        // ethContract.methods.totalSupply().call(),
-        ethContract.methods.decimals().call(),
-        ethContract.methods.balanceOf(burnWallet).call(),
       ]);
       res.send(
         getBalance(bscTotalSupply, bscDecimals)
-          .plus(getBalance(ethTotalSupply, bscDecimals))
-          .minus(getBalance(bscBurnedAddyBal, bscDecimals))
-          .minus(getBalance(ethBurnedAddyBal, ethDecimals))
           .toString()
       );
     } catch (err: any) {
