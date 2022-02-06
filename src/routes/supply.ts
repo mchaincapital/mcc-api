@@ -61,6 +61,7 @@ export default async function OKLGSupply(app: Application) {
         bscContract.methods.balanceOf(burnWallet).call(),
         // ethContract.methods.totalSupply().call(),
         ethContract.methods.decimals().call(),
+        ethContract.methods.balanceOf(burnWallet).call(),
       ]);
       res.send(
         getBalance(bscTotalSupply, bscDecimals)
