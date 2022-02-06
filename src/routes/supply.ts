@@ -19,7 +19,7 @@ const walletInfo: any = {
     ],
   },
   eth: {
-    bridge: "0x9c59e2fe66a8999c947b5d240f574704e3f31945",
+    bridge: "0xFF9B8058035a60967fAA7be23259E875E8684D6F",
     token: "0xc146b7cdbaff065090077151d391f4c96aa09e0c",
     treasuries: [
       "0xFBf335f8224a102e22abE78D78CC52dc95e074Fa",
